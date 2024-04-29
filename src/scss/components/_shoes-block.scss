@@ -1,0 +1,76 @@
+@import '../variables';
+
+.shoes-block {
+  width: 280px;
+  text-align: center;
+  margin-bottom: 45px;
+
+  &-wrapper {
+    display: flex;
+    //justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    //align-items: center;
+    align-content: center;
+  }
+
+  &__image {
+    width: 260px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1%;
+    margin-bottom: 0;
+    min-height: 80px;
+  }
+
+  &__selector {
+    display: grid; /* Используем CSS Grid */
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(80px, 1fr)
+    ); /* Автоматически определяем количество колонок */
+    gap: 6px; /* Отступы между элементами */
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 6px;
+    margin-bottom: 20px;
+    ul {
+      display: contents; /* Пропускаем ul для работы только с li */
+      list-style: none; /* Убираем маркеры списка */
+      padding: 0; /* Убираем внутренние отступы списка */
+
+      li {
+        padding: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        margin: 0; /* Убираем внешние отступы */
+        @include noselect();
+        &.active {
+          background: #ffffff;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+          border-radius: 5px;
+          cursor: auto;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+    margin-left: 10px;
+  }
+}

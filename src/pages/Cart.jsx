@@ -4,13 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { clearItems, selectCart } from '../redux/slices/cartSlice.js';
 import CartItems from '../components/CartItems.jsx';
 import CartEmpty from '../components/CartEmpty.jsx';
-import { calcTotalPrice } from '../utils/calcTotalPrice.js';
 
 const Cart = () => {
   const dispatch = useDispatch();
   const { totalPrice, items } = useSelector(selectCart);
 
-  const totalCount = calcTotalPrice(items);
+  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
   const onClickClear = () => {
     if (window.confirm('Очистити корзину?')) dispatch(clearItems());

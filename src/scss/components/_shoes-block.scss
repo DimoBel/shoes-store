@@ -7,10 +7,8 @@
 
   &-wrapper {
     display: flex;
-    //justify-content: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    //align-items: center;
     align-content: center;
   }
 
@@ -27,27 +25,24 @@
   }
 
   &__selector {
-    display: grid; /* Используем CSS Grid */
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(80px, 1fr)
-    ); /* Автоматически определяем количество колонок */
-    gap: 6px; /* Отступы между элементами */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 6px;
     background-color: #f3f3f3;
     border-radius: 10px;
     padding: 6px;
     margin-bottom: 20px;
     ul {
-      display: contents; /* Пропускаем ul для работы только с li */
-      list-style: none; /* Убираем маркеры списка */
-      padding: 0; /* Убираем внутренние отступы списка */
+      display: contents;
+      list-style: none;
+      padding: 0;
 
       li {
         padding: 8px;
         cursor: pointer;
         font-weight: 600;
         font-size: 14px;
-        margin: 0; /* Убираем внешние отступы */
+        margin: 0;
         @include noselect();
         &.active {
           background: #ffffff;

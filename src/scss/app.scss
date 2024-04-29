@@ -1,12 +1,8 @@
 @import './variables.scss';
 @import './libs/normalize.scss';
-
 @import './components/all.scss';
 
 body {
-  // background-color: $background;
-  //background: linear-gradient(to right, rgb(127, 127, 213), rgb(134, 168, 231), rgb(145, 234, 228));
-  // background: linear-gradient(to right, rgb(189, 195, 199), rgb(96, 101, 105));
   background: linear-gradient(
     to top,
     lightgrey 0%,
@@ -87,8 +83,6 @@ body {
     justify-content: space-between;
 
     @media (max-width: 1260px) {
-      //flex-direction: column-reverse;
-
       .categories {
         margin-top: 30px;
         width: 100%;
@@ -195,21 +189,21 @@ body {
 
   @media (max-width: 1000px) {
     &__product {
-      flex-direction: column; /* Размещаем элементы вертикально */
-      margin: 20px 0; /* Убираем отступы по бокам */
-      align-items: center; /* Центрируем содержимое по горизонтали */
+      flex-direction: column;
+      margin: 20px 0;
+      align-items: center;
       margin-left: 0;
       .image-container {
-        margin-right: 0; /* Убираем правый отступ */
-        text-align: center; /* Центрируем содержимое по горизонтали */
+        margin-right: 0;
+        text-align: center;
       }
       .info-container {
-        margin-top: 20px; /* Добавляем отступ между блоками */
-        text-align: justify; /* Центрируем содержимое по горизонтали */
+        margin-top: 20px;
+        text-align: justify;
         margin-right: 50px;
       }
       .image-container img {
-        width: 100%; /* Ширина изображения на всю ширину блока */
+        width: 100%;
       }
     }
   }
@@ -217,7 +211,7 @@ body {
   @media (max-width: 600px) {
     &__product {
       .image-container img {
-        width: 70%; /* Ширина изображения на всю ширину блока */
+        width: 70%;
       }
     }
   }
@@ -303,7 +297,7 @@ body {
     padding-top: 30px;
     margin-top: 30px;
     @media (max-width: 750px) {
-      flex-direction: column; /* Change to vertical layout on smaller screens */
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -314,8 +308,8 @@ body {
       margin-right: 15px;
       width: 10%;
       @media (max-width: 750px) {
-        width: 100%; /* Occupy full width on smaller screens */
-        margin-right: 0; /* Remove margin on smaller screens */
+        width: 100%;
+        margin-right: 0;
         justify-content: center;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -336,8 +330,8 @@ body {
       justify-content: center;
       width: 70%;
       @media (max-width: 750px) {
-        width: 100%; /* Occupy full width on smaller screens */
-        margin-right: 0; /* Remove margin on smaller screens */
+        width: 100%;
+        margin-right: 0;
         justify-content: center;
         align-items: center;
         margin-top: 10px;
@@ -371,8 +365,8 @@ body {
       justify-content: space-between;
       width: 13%;
       @media (max-width: 750px) {
-        width: 100%; /* Occupy full width on smaller screens */
-        margin-right: 0; /* Remove margin on smaller screens */
+        width: 100%;
+        margin-right: 0;
         justify-content: center;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -403,8 +397,8 @@ body {
       justify-content: center;
       width: 35%;
       @media (max-width: 750px) {
-        width: 100%; /* Occupy full width on smaller screens */
-        margin-right: 0; /* Remove margin on smaller screens */
+        width: 100%;
+        margin-right: 0;
         justify-content: center;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -428,8 +422,8 @@ body {
       justify-content: flex-end;
       width: 4%;
       @media (max-width: 750px) {
-        width: 20%; /* Occupy full width on smaller screens */
-        margin-right: 0; /* Remove margin on smaller screens */
+        width: 20%;
+        margin-right: 0;
         justify-content: center;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -534,7 +528,7 @@ body {
         .go-back-btn,
         .pay-btn {
           width: 100%;
-          margin-bottom: 10px; /* добавим небольшой отступ между кнопками */
+          margin-bottom: 10px;
         }
       }
     }

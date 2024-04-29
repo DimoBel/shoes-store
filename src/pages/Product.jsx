@@ -1,15 +1,19 @@
 import React from 'react';
 import axios from 'axios';
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { addItem } from '../redux/slices/cartSlice';
 import { useDispatch } from 'react-redux';
+
 import loading from '../assets/img/loading.gif';
 
 const Product = () => {
   const [shoes, setShoes] = React.useState([]);
   const [activeSize, setActiveSize] = React.useState(0);
   const [isLoading, setIsLoading] = React.useState(true);
+
   const { id } = useParams();
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 

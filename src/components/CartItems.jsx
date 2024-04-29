@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addItem, minusItem, removeItem } from '../redux/slices/cartSlice';
-import { Link } from 'react-router-dom';
 
 const CartItems = ({ id, title, size, price, count, imageUrl }) => {
   const dispatch = useDispatch();
@@ -21,7 +20,7 @@ const CartItems = ({ id, title, size, price, count, imageUrl }) => {
   return (
     <div class="cart__item">
       <div class="cart__item-img">
-        <img class="shoes-block__image" src={imageUrl} alt="Pizza" />
+        <img class="shoes-block__image" src={imageUrl} alt="Shoes" />
       </div>
       <div class="cart__item-info">
         <h3>{title}</h3>

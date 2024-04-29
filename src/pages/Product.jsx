@@ -3,10 +3,12 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import { addItem } from '../redux/slices/cartSlice';
 import { useDispatch } from 'react-redux';
+import loading from '../assets/img/loading.gif';
 
 const Product = () => {
   const [shoes, setShoes] = React.useState([]);
   const [activeSize, setActiveSize] = React.useState(0);
+  const [isLoading, setIsLoading] = React.useState(true);
   const { id } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -19,6 +21,8 @@ const Product = () => {
       } catch (error) {
         alert('Помилка при отриманні товару!');
         navigate('/');
+      } finally {
+        setIsLoading(false);
       }
     }
     fetchShoes();
@@ -26,6 +30,17 @@ const Product = () => {
 
   if (!shoes) {
     return 'Загрузка...';
+  }
+  if (isLoading) {
+    return (
+      <div className="container">
+        <img
+          src={loading}
+          style={{ width: '100px', height: '100px', display: 'block', margin: '0 auto' }}
+          alt="Завантаження сторінки"
+        />
+      </div>
+    );
   }
   const onClickAdd = () => {
     const { id, title, price, imageUrl, sizes } = shoes;

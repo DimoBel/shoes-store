@@ -63,6 +63,14 @@ const Home = () => {
     navigate(`?${queryString}`);
   }, [categoryId, sort.sortProperty, currentPage]);
 
+  let docTitle = document.title;
+  window.addEventListener('blur', () => {
+    document.title = 'Верніться будь ласка ◉_◉';
+  });
+  window.addEventListener('focus', () => {
+    document.title = docTitle;
+  });
+
   const shoes = items.map((obj) => <ShoesBlock {...obj} />);
 
   const skeletons = [...new Array(8)].map((_, index) => <Skeleton key={index} />);

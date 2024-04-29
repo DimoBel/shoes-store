@@ -20,17 +20,13 @@ const CartItems = ({ id, title, size, price, count, imageUrl }) => {
 
   return (
     <div class="cart__item">
-      <Link to={`/shoes/${id}`}>
-        <div class="cart__item-img">
-          <img class="shoes-block__image" src={imageUrl} alt="Pizza" />
-        </div>
-      </Link>
-      <Link to={`/shoes/${id}`}>
-        <div class="cart__item-info">
-          <h3>{title}</h3>
-          <p>Розмір: {size}</p>
-        </div>
-      </Link>
+      <div class="cart__item-img">
+        <img class="shoes-block__image" src={imageUrl} alt="Pizza" />
+      </div>
+      <div class="cart__item-info">
+        <h3>{title}</h3>
+        <p>Розмір: {size}</p>
+      </div>
       <div class="cart__item-count">
         <div
           onClick={onClickMinus}

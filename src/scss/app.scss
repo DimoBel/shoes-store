@@ -142,10 +142,21 @@ body {
       img {
         width: 500px;
       }
+      @media (max-width: 1400px) {
+        img {
+          width: 400px;
+        }
+      }
+      @media (max-width: 1200px) {
+        img {
+          width: 300px;
+        }
+      }
     }
     .info-container {
       flex: 2;
       margin-left: 50px;
+
       h1 {
         font-size: 40px;
       }
@@ -162,6 +173,51 @@ body {
       p {
         font-size: 18px;
         text-align: justify;
+      }
+      @media (max-width: 1000px) {
+        h1 {
+          font-size: 30px;
+        }
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 570px) {
+        h1 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    &__product {
+      flex-direction: column; /* Размещаем элементы вертикально */
+      margin: 20px 0; /* Убираем отступы по бокам */
+      align-items: center; /* Центрируем содержимое по горизонтали */
+      margin-left: 0;
+      .image-container {
+        margin-right: 0; /* Убираем правый отступ */
+        text-align: center; /* Центрируем содержимое по горизонтали */
+      }
+      .info-container {
+        margin-top: 20px; /* Добавляем отступ между блоками */
+        text-align: justify; /* Центрируем содержимое по горизонтали */
+        margin-right: 50px;
+      }
+      .image-container img {
+        width: 100%; /* Ширина изображения на всю ширину блока */
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__product {
+      .image-container img {
+        width: 70%; /* Ширина изображения на всю ширину блока */
       }
     }
   }
@@ -214,7 +270,12 @@ body {
       color: #b6b6b6;
       font-size: 18px;
     }
-
+    @media (max-width: 430px) {
+      span {
+        font-size: 15px;
+      }
+      padding-left: 40px;
+    }
     span,
     svg,
     path {
@@ -244,6 +305,7 @@ body {
     @media (max-width: 750px) {
       flex-direction: column; /* Change to vertical layout on smaller screens */
       justify-content: center;
+      align-items: center;
     }
 
     &-img {
@@ -255,6 +317,8 @@ body {
         width: 100%; /* Occupy full width on smaller screens */
         margin-right: 0; /* Remove margin on smaller screens */
         justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
       img {
         width: 80px;
@@ -275,6 +339,9 @@ body {
         width: 100%; /* Occupy full width on smaller screens */
         margin-right: 0; /* Remove margin on smaller screens */
         justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
       h3 {
         font-weight: bold;
@@ -287,6 +354,15 @@ body {
         font-size: 18px;
         color: #8d8d8d;
       }
+      @media (max-width: 500px) {
+        h3 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 15px;
+          color: #8d8d8d;
+        }
+      }
     }
 
     &-count {
@@ -295,9 +371,11 @@ body {
       justify-content: space-between;
       width: 13%;
       @media (max-width: 750px) {
-        width: 20%; /* Occupy full width on smaller screens */
+        width: 100%; /* Occupy full width on smaller screens */
         margin-right: 0; /* Remove margin on smaller screens */
         justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
       &-minus {
         svg {
@@ -312,23 +390,35 @@ body {
         margin-left: 10px;
         margin-right: 10px;
       }
+      @media (max-width: 500px) {
+        b {
+          font-size: 18px;
+        }
+      }
     }
 
     &-price {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 33%;
+      width: 35%;
       @media (max-width: 750px) {
-        width: 20%; /* Occupy full width on smaller screens */
+        width: 100%; /* Occupy full width on smaller screens */
         margin-right: 0; /* Remove margin on smaller screens */
         justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
 
       b {
         font-weight: bold;
         font-size: 22px;
         letter-spacing: 0.01em;
+      }
+      @media (max-width: 500px) {
+        b {
+          font-size: 18px;
+        }
       }
     }
 
@@ -341,6 +431,8 @@ body {
         width: 20%; /* Occupy full width on smaller screens */
         margin-right: 0; /* Remove margin on smaller screens */
         justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
 
       .button {
@@ -384,6 +476,11 @@ body {
           b {
             color: black;
           }
+        }
+      }
+      @media (max-width: 500px) {
+        span {
+          font-size: 18px;
         }
       }
     }
@@ -430,6 +527,15 @@ body {
         font-weight: 600;
         width: 250px;
         padding: 16px;
+      }
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+
+        .go-back-btn,
+        .pay-btn {
+          width: 100%;
+          margin-bottom: 10px; /* добавим небольшой отступ между кнопками */
+        }
       }
     }
   }

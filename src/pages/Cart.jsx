@@ -103,11 +103,11 @@ const Cart = () => {
           <div className="cart__bottom-details">
             <span>
               {' '}
-              Всього товарів: <b>{totalCount} шт.</b>{' '}
+              Всього товарів: <b>{totalCount}</b>{' '}
             </span>
             <span>
               {' '}
-              Сума: <b>{totalPrice} ₴</b>{' '}
+              Сума: <b>{totalPrice}₴</b>{' '}
             </span>
           </div>
           <div className="cart__bottom-buttons">

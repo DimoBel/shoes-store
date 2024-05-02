@@ -35,7 +35,6 @@ function Sort({ setOrder }) {
     <div ref={sortRef} className="sort">
       <div className="sort__label">
         <b>Сортувати:</b>
-
         <span onClick={() => setOpen(!open)}>{sort.name}</span>
         <button onClick={() => setOrder('asc')}>↑</button>
         <button onClick={() => setOrder('desc')}>↓</button>

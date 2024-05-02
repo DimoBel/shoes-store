@@ -21,9 +21,14 @@ const Search = () => {
   };
 
   const onMouseDownClear = (event) => {
-    // фикс бага кнопки очистки поля поиска
+    // фікс багу кнопки очистки поля пошуку
     event.preventDefault();
     onClickClear();
+  };
+
+  const onChangeInput = (event) => {
+    setValue(event.target.value);
+    updateSearchValue(event.target.value);
   };
 
   const updateSearchValue = React.useCallback(
@@ -33,10 +38,6 @@ const Search = () => {
     [],
   );
 
-  const onChangeInput = (event) => {
-    setValue(event.target.value);
-    updateSearchValue(event.target.value);
-  };
   return (
     <div className={styles.root}>
       <img className={styles.icon} src={searchIcon} alt="Пошук"></img>

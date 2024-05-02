@@ -90,7 +90,6 @@ const Cart = () => {
                 stroke-linejoin="round"
               />
             </svg>
-
             <span>Очистити кошик</span>
           </div>
         </div>
@@ -126,7 +125,6 @@ const Cart = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-
               <span>Повернутися назад</span>
             </Link>
             <Link to="/checkout">

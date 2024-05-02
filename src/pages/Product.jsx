@@ -22,6 +22,7 @@ const Product = () => {
       try {
         const { data } = await axios.get('https://66264d33052332d55322633f.mockapi.io/items/' + id);
         setShoes(data);
+        console.log(data);
       } catch (error) {
         alert('Помилка при отриманні товару!');
         navigate('/');

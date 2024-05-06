@@ -4,14 +4,16 @@
 
 body {
   background: linear-gradient(
-    to top,
-    lightgrey 0%,
-    lightgrey 1%,
-    rgb(224, 224, 224) 26%,
-    rgb(239, 239, 239) 48%,
-    rgb(217, 217, 217) 75%,
-    rgb(188, 188, 188) 100%
-  );
+      to top,
+      lightgrey 0%,
+      lightgrey 1%,
+      rgb(224, 224, 224) 26%,
+      rgb(239, 239, 239) 48%,
+      rgb(217, 217, 217) 75%,
+      rgb(188, 188, 188) 100%
+    )
+    no-repeat;
+  height: 100%;
 }
 
 .wrapper {
